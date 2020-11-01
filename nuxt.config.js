@@ -11,9 +11,9 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -37,7 +37,11 @@ export default {
   server: {
     https: {
       key: fs.readFileSync(path.resolve(__dirname, "localhost.key")),
-      cert: fs.readFileSync(path.resolve(__dirname, "localhost.crt"))
-    }
-  }
+      cert: fs.readFileSync(path.resolve(__dirname, "localhost.crt")),
+    },
+  },
+
+  env: {
+    API_KEY: "7272755a0c7e408eaa20038a2a5a6698",
+  },
 };
